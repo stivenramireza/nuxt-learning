@@ -45,7 +45,7 @@ export const actions = {
         }
     },
     async deleteTask({commit}, payload){
-        db.collection('tasks').doc(payload.id).delete()
+        await db.collection('tasks').doc(payload.id).delete()
             .then(() => {
                 console.log('Document has been deleted!')
                 commit('deleteTask', payload)
@@ -53,5 +53,6 @@ export const actions = {
             .catch(err => {
                 console.log('Error deleting document: ', err)
             })
-    }
+    },
+
 }

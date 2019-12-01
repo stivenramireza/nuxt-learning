@@ -9,7 +9,7 @@
             <li v-for="(item, index) in tasks" :key="index">
                 {{ item.id }} - {{ item.name }}
                 <b-button class="btn-sm btn-warning">Update</b-button>
-                <b-button class="btn-sm btn-danger">Delete</b-button>
+                <b-button class="btn-sm btn-danger" @click="deleteTask(item)">Delete</b-button>
                 <hr>
             </li>
         </ul>
@@ -42,7 +42,7 @@ export default {
         ...mapState(['tasks'])
     },
     methods: {
-        ...mapActions(['addTask'])
+        ...mapActions(['addTask', 'deleteTask'])
     }
 }
 </script>
