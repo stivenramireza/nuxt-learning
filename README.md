@@ -1,4 +1,4 @@
-# Simple Nuxt.js CRUD
+# Nuxt.js Learning
 
 Simple CRUD web application using Nuxt.js (Server Side Rendering).
 
